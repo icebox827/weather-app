@@ -25,6 +25,7 @@ function main() {
 
   const cityLabel = document.createElement('label');
   const cityInput = document.createElement('input');
+  const searchBtn = document.createElement('button');
 
   cityLabel.setAttribute('for', 'City');
   cityInput.setAttribute('type', 'text');
@@ -37,6 +38,7 @@ function main() {
   main.appendChild(form);
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
+  form .appendChild(searchBtn);
 
   return main;
 }
