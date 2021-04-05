@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Weather application using API ",
   "main": "webpack.config.js",
-  "private":"true",
+  "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/icebox827/weather-app/issues"
   },
-  "homepage": "https://github.com/icebox827/weather-app#readme"
+  "homepage": "https://github.com/icebox827/weather-app#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  }
 }
