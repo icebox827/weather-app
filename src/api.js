@@ -3,6 +3,6 @@ const api = (() => {
   const data = {};
 
   const getData = async (city) => {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${key}`, { mode: 'cors' });
+    const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`, { mode: 'cors' });
   }
 })();
