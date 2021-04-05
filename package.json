@@ -1,0 +1,20 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather application using API ",
+  "main": "webpack.config.js",
+  "private":"true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icebox827/weather-app.git"
+  },
+  "author": "Denis Lafontant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icebox827/weather-app/issues"
+  },
+  "homepage": "https://github.com/icebox827/weather-app#readme"
+}
