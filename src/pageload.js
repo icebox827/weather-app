@@ -1,4 +1,3 @@
-import { format } from 'node:path';
 import api from './api';
 
 function header() {
@@ -25,13 +24,21 @@ function main() {
 
   const cityLabel = document.createElement('label');
   const cityInput = document.createElement('input');
-  const searchBtn = document.createElement('button');
+  const searchBtn = document.createElement('button').addEventListener('click', async () => {
+    if (cityInput.value === "") return;
+    const weatherData = await api.getData(cityInput.value)
+    
+  });
 
   cityLabel.setAttribute('for', 'City');
   cityInput.setAttribute('type', 'text');
   cityInput.setAttribute('id', 'cityInput');
   cityInput.setAttribute('name', 'City');
   cityInput.setAttribute('placeholer', 'Please enter the name of a city.');
+
+  searchBtn.setAttribute('id', 'button');
+  searchBtn.setAttribute('type', 'submit');
+  searchBtn.classList.add('btn btn-success');
 
   cityLabel.innerHTML = '<h2>City name</h2>';
 
@@ -41,6 +48,31 @@ function main() {
   form .appendChild(searchBtn);
 
   return main;
+}
+
+function showData() {
+  const card = document.createElement('card');
+  const cardName = document.createElement('h3');
+  const cardCountry = document.createElement('h4');
+  const cardTemperature = document.createElement('h6');
+  const cardWeather = document.createElement('h6');
+  const cardIcon = document.createElement('img');
+  const cardMaxTemp = document.createElement('h6');
+  const cardMinTemp = document.createElement('h6');
+  const cardPressure = document.createElement('h6');
+  const cardHumidity = document.createElement('h6');
+  const cardVisibility = document.createElement('h6');
+  const cardWinSpeed = document.createElement('h6');
+  const cardWinDeg = document.createElement('h6');
+  const cardCloud= document.createElement('h6');
+  const cardSunSet = document.createElement('h6');
+  const cardSunSRise = document.createElement('h6');
+
+  cardName.innerHTML = `${myData.name}`;
+
+  card.classList.add('card');
+
+  return card;
 }
 
 function footer() {
