@@ -4,5 +4,11 @@ const api = (() => {
 
   const getData = async (city) => {
     const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`, { mode: 'cors' });
+
+    const jsonObj = await response.json();
+
+    try {
+      data = 
+    }
   }
 })();
