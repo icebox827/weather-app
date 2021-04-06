@@ -24,11 +24,7 @@ function main() {
 
   const cityLabel = document.createElement('label');
   const cityInput = document.createElement('input');
-  const searchBtn = document.createElement('button').addEventListener('click', async () => {
-    if (cityInput.value === "") return;
-    const weatherData = await api.getData(cityInput.value)
-    
-  });
+  const searchBtn = document.createElement('button');
 
   cityLabel.setAttribute('for', 'City');
   cityLabel.classList.add('form-label');
@@ -37,17 +33,19 @@ function main() {
   cityInput.setAttribute('name', 'City');
   cityInput.setAttribute('placeholder', 'Please enter the name of a city.');
 
-  // searchBtn.setAttribute('id', 'button');
-  // searchBtn.setAttribute('type', 'submit');
-  // searchBtn.classList.add('btn btn-success');
+  searchBtn.setAttribute('id', 'button');
+  searchBtn.setAttribute('type', 'submit');
+  searchBtn.setAttribute('value', 'Search')
+  searchBtn.classList.add('submit', 'btn-primary');
 
   cityLabel.innerHTML = '<h2>City name</h2>';
   cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
+  searchBtn.innerHTML = 'Search';
 
   main.appendChild(form);
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
-  // form.appendChild(searchBtn);
+  form.appendChild(searchBtn);
 
   return main;
 }
