@@ -3,7 +3,10 @@ const api = (() => {
   const myData = {};
 
   const getData = async (city) => {
-    const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`, { mode: 'cors' });
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+    console.log(url);
+    console.log(city);
+    const response = await fetch(url, { mode: 'cors' });  
     
     try {
       const myJson = await response.json();
