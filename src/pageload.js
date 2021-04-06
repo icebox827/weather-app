@@ -42,9 +42,7 @@ function main() {
   cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
   searchBtn.innerHTML = 'Search';
 
-  searchBtn.addEventListener('click', function () {
-    return showData(myData);
-  })
+  searchBtn.addEventListener('click', showData)
 
   main.appendChild(form);
   form.appendChild(cityLabel);
