@@ -44,7 +44,7 @@ function main() {
 
   searchBtn.addEventListener('click', async () => {
     if (cityInput.value === "") return;
-    const weatherData = await api.getData(cityInput.value);
+    const myData = await api.getData(cityInput.value);
     showData(myData);
   })
 
@@ -56,7 +56,7 @@ function main() {
   return main;
 }
 
-function showData(myData) {
+const showData = (myData) => {
   const card = document.createElement('card');
   const cardName = document.createElement('h3');
   const cardCountry = document.createElement('h4');
