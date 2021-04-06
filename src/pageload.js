@@ -42,6 +42,10 @@ function main() {
   cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
   searchBtn.innerHTML = 'Search';
 
+  searchBtn.addEventListener('click', function () {
+    return showData(myData);
+  })
+
   main.appendChild(form);
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
@@ -64,7 +68,7 @@ function showData(myData) {
   const cardWindSpeed = document.createElement('h6');
   const cardWinDeg = document.createElement('h6');
   const cardCloud= document.createElement('h6');
-  const cardSunSRise = document.createElement('h6');
+  const cardSunRise = document.createElement('h6');
   const cardSunSet = document.createElement('h6');
   
 
@@ -80,10 +84,25 @@ function showData(myData) {
   cardWindSpeed.innerHTML = `${myData.windSpeed}`;
   cardWinDeg.innerHTML = `${myData.winDeg}`;
   cardCloud.innerHTML = `${myData.cloud}`;
-  cardSunSRise.innerHTML = `${myData.sunRise}`;
+  cardSunRise.innerHTML = `${myData.sunRise}`;
   cardSunSet.innerHTML = `${myData.sunSet}`;
 
   card.classList.add('card');
+
+  card.appendChild(cardName);
+  card.appendChild(cardCountry);
+  card.appendChild(cardTemperature);
+  card.appendChild(cardWeather);
+  card.appendChild(cardMaxTemp);
+  card.appendChild(cardMinTemp);
+  card.appendChild(cardPressure);
+  card.appendChild(cardHumidity);
+  card.appendChild(cardVisibility);
+  card.appendChild(cardWindSpeed);
+  card.appendChild(cardWinDeg);
+  card.appendChild(cardCloud);
+  card.appendChild(cardSunRise);
+  card.appendChild(cardSunSet);
 
   return card;
 }
