@@ -31,6 +31,7 @@ function main() {
   });
 
   cityLabel.setAttribute('for', 'City');
+  cityLabel.classList.add('form-label');
   cityInput.setAttribute('type', 'text');
   cityInput.setAttribute('id', 'cityInput');
   cityInput.setAttribute('name', 'City');
