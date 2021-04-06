@@ -62,17 +62,17 @@ const showData = (myData) => {
   const cardName = document.createElement('h3');
   const cardCountry = document.createElement('h4');
   const cardTemperature = document.createElement('h6');
-  // const cardWeather = document.createElement('h6');
-  // const cardMaxTemp = document.createElement('h6');
-  // const cardMinTemp = document.createElement('h6');
-  // const cardPressure = document.createElement('h6');
-  // const cardHumidity = document.createElement('h6');
-  // const cardVisibility = document.createElement('h6');
-  // const cardWindSpeed = document.createElement('h6');
-  // const cardWinDeg = document.createElement('h6');
-  // const cardCloud= document.createElement('h6');
-  // const cardSunRise = document.createElement('h6');
-  // const cardSunSet = document.createElement('h6');
+  const cardWeather = document.createElement('h6');
+  const cardMaxTemp = document.createElement('h6');
+  const cardMinTemp = document.createElement('h6');
+  const cardPressure = document.createElement('h6');
+  const cardHumidity = document.createElement('h6');
+  const cardVisibility = document.createElement('h6');
+  const cardWindSpeed = document.createElement('h6');
+  const cardWinDeg = document.createElement('h6');
+  const cardCloud= document.createElement('h6');
+  const cardSunRise = document.createElement('h6');
+  const cardSunSet = document.createElement('h6');
   
 
   // cardName.innerHTML = `${myData.name}`;
@@ -95,17 +95,17 @@ const showData = (myData) => {
   card.appendChild(cardName);
   card.appendChild(cardCountry);
   card.appendChild(cardTemperature);
-  // card.appendChild(cardWeather);
-  // card.appendChild(cardMaxTemp);
-  // card.appendChild(cardMinTemp);
-  // card.appendChild(cardPressure);
-  // card.appendChild(cardHumidity);
-  // card.appendChild(cardVisibility);
-  // card.appendChild(cardWindSpeed);
-  // card.appendChild(cardWinDeg);
-  // card.appendChild(cardCloud);
-  // card.appendChild(cardSunRise);
-  // card.appendChild(cardSunSet);
+  card.appendChild(cardWeather);
+  card.appendChild(cardMaxTemp);
+  card.appendChild(cardMinTemp);
+  card.appendChild(cardPressure);
+  card.appendChild(cardHumidity);
+  card.appendChild(cardVisibility);
+  card.appendChild(cardWindSpeed);
+  card.appendChild(cardWinDeg);
+  card.appendChild(cardCloud);
+  card.appendChild(cardSunRise);
+  card.appendChild(cardSunSet);
 
   return card;
 }
