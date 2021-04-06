@@ -44,8 +44,8 @@ function main() {
 
   searchBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    // if (cityInput.value === " ") return;
-    // const fetchData = await api.getData(cityInput.value);
+    if (cityInput.value === " ") return;
+    const fetchData = await api.getData(cityInput.value);
     showData;
   });
 
@@ -57,7 +57,7 @@ function main() {
   return main;
 }
 
-const showData = () => {
+const showData = (myData) => {
   const card = document.createElement('card');
   const cardName = document.createElement('h3');
   const cardCountry = document.createElement('h4');
@@ -75,9 +75,9 @@ const showData = () => {
   // const cardSunSet = document.createElement('h6');
   
 
-  cardName.innerHTML = "Paris";
-  cardCountry.innerHTML = "France";
-  cardTemperature.innerHTML = "400 C";
+  // cardName.innerHTML = `${myData.name}`;
+  // cardCountry.innerHTML = `${myData.country}`;
+  // cardTemperature.innerHTML = `${myData.temp}`;
   // cardWeather.innerHTML = `${myData.weather}`;
   // cardMaxTemp.innerHTML = `${myData.maxTemp}`;
   // cardMinTemp.innerHTML = `${myData.minTemp}`;
