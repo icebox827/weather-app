@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  background-color: blue;
+}
+
+nav {
+  background-color: inherit;
+}
+
+nav h1 {
+  color: white;
+  font-weight: 800;
+  margin-left: auto;
+  margin-right: auto;
+}

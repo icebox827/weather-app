@@ -9,7 +9,7 @@ function header() {
   name.innerHTML = 'UHM Weather Forecast';
 
   nav.appendChild(name);
-  header.appendChild(navBar);
+  header.appendChild(nav);
 
   return header;
 }
@@ -34,18 +34,19 @@ function main() {
   cityInput.setAttribute('type', 'text');
   cityInput.setAttribute('id', 'cityInput');
   cityInput.setAttribute('name', 'City');
-  cityInput.setAttribute('placeholer', 'Please enter the name of a city.');
+  cityInput.setAttribute('placeholder', 'Please enter the name of a city.');
 
-  searchBtn.setAttribute('id', 'button');
-  searchBtn.setAttribute('type', 'submit');
-  searchBtn.classList.add('btn btn-success');
+  // searchBtn.setAttribute('id', 'button');
+  // searchBtn.setAttribute('type', 'submit');
+  // searchBtn.classList.add('btn btn-success');
 
   cityLabel.innerHTML = '<h2>City name</h2>';
+  cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
 
   main.appendChild(form);
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
-  form .appendChild(searchBtn);
+  // form.appendChild(searchBtn);
 
   return main;
 }
