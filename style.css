@@ -29,6 +29,20 @@ main {
   margin-top: 3rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.submit {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
 .footer {
   position: fixed;
   left: 0;
