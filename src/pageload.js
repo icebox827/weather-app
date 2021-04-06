@@ -50,25 +50,38 @@ function main() {
   return main;
 }
 
-function showData() {
+function showData(myData) {
   const card = document.createElement('card');
   const cardName = document.createElement('h3');
   const cardCountry = document.createElement('h4');
   const cardTemperature = document.createElement('h6');
   const cardWeather = document.createElement('h6');
-  const cardIcon = document.createElement('img');
   const cardMaxTemp = document.createElement('h6');
   const cardMinTemp = document.createElement('h6');
   const cardPressure = document.createElement('h6');
   const cardHumidity = document.createElement('h6');
   const cardVisibility = document.createElement('h6');
-  const cardWinSpeed = document.createElement('h6');
+  const cardWindSpeed = document.createElement('h6');
   const cardWinDeg = document.createElement('h6');
   const cardCloud= document.createElement('h6');
-  const cardSunSet = document.createElement('h6');
   const cardSunSRise = document.createElement('h6');
+  const cardSunSet = document.createElement('h6');
+  
 
   cardName.innerHTML = `${myData.name}`;
+  cardCountry.innerHTML = `${myData.country}`;
+  cardTemperature.innerHTML = `${myData.temp}`;
+  cardWeather.innerHTML = `${myData.weather}`;
+  cardMaxTemp.innerHTML = `${myData.maxTemp}`;
+  cardMinTemp.innerHTML = `${myData.minTemp}`;
+  cardPressure.innerHTML = `${myData.pressure}`;
+  cardHumidity.innerHTML = `${myData.humidity}`;
+  cardVisibility.innerHTML = `${myData.visibility}`;
+  cardWindSpeed.innerHTML = `${myData.windSpeed}`;
+  cardWinDeg.innerHTML = `${myData.winDeg}`;
+  cardCloud.innerHTML = `${myData.cloud}`;
+  cardSunSRise.innerHTML = `${myData.sunRise}`;
+  cardSunSet.innerHTML = `${myData.sunSet}`;
 
   card.classList.add('card');
 

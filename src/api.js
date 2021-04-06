@@ -12,9 +12,8 @@ const api = (() => {
       myData.country = myJson.sys.country;
       myData.temp = myJson.main.temp
       myData.weather = myJson.weather[0].descrption;
-      myData.icon = myJson.weather[0].icon;
       myData.maxTemp = myJson.main.temp_max;
-      myData.minTem = myJson.main.temp_min;
+      myData.minTemp = myJson.main.temp_min;
       myData.pressure = myJson.main.pressure;
       myData.humidity = myJson.main.humidity;
       myData.visibility = myJson.visibility;
