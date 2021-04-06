@@ -42,7 +42,11 @@ function main() {
   cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
   searchBtn.innerHTML = 'Search';
 
-  searchBtn.addEventListener('click', showData)
+  searchBtn.addEventListener('click', async () => {
+    if (cityInput.value === "") return;
+    const weatherData = await api.getData(cityInput.value);
+    showData(myData);
+  })
 
   main.appendChild(form);
   form.appendChild(cityLabel);
