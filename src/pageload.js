@@ -44,9 +44,9 @@ function main() {
 
   searchBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    if (cityInput.value === " ") return;
-    const fetchData = await api.getData(cityInput.value);
-    showData(fetchData);
+    // if (cityInput.value === " ") return;
+    // const fetchData = await api.getData(cityInput.value);
+    showData;
   });
 
   main.appendChild(form);
@@ -57,55 +57,55 @@ function main() {
   return main;
 }
 
-const showData = (myData) => {
+const showData = () => {
   const card = document.createElement('card');
   const cardName = document.createElement('h3');
   const cardCountry = document.createElement('h4');
   const cardTemperature = document.createElement('h6');
-  const cardWeather = document.createElement('h6');
-  const cardMaxTemp = document.createElement('h6');
-  const cardMinTemp = document.createElement('h6');
-  const cardPressure = document.createElement('h6');
-  const cardHumidity = document.createElement('h6');
-  const cardVisibility = document.createElement('h6');
-  const cardWindSpeed = document.createElement('h6');
-  const cardWinDeg = document.createElement('h6');
-  const cardCloud= document.createElement('h6');
-  const cardSunRise = document.createElement('h6');
-  const cardSunSet = document.createElement('h6');
+  // const cardWeather = document.createElement('h6');
+  // const cardMaxTemp = document.createElement('h6');
+  // const cardMinTemp = document.createElement('h6');
+  // const cardPressure = document.createElement('h6');
+  // const cardHumidity = document.createElement('h6');
+  // const cardVisibility = document.createElement('h6');
+  // const cardWindSpeed = document.createElement('h6');
+  // const cardWinDeg = document.createElement('h6');
+  // const cardCloud= document.createElement('h6');
+  // const cardSunRise = document.createElement('h6');
+  // const cardSunSet = document.createElement('h6');
   
 
-  cardName.innerHTML = `${myData.name}`;
-  cardCountry.innerHTML = `${myData.country}`;
-  cardTemperature.innerHTML = `${myData.temp}`;
-  cardWeather.innerHTML = `${myData.weather}`;
-  cardMaxTemp.innerHTML = `${myData.maxTemp}`;
-  cardMinTemp.innerHTML = `${myData.minTemp}`;
-  cardPressure.innerHTML = `${myData.pressure}`;
-  cardHumidity.innerHTML = `${myData.humidity}`;
-  cardVisibility.innerHTML = `${myData.visibility}`;
-  cardWindSpeed.innerHTML = `${myData.windSpeed}`;
-  cardWinDeg.innerHTML = `${myData.winDeg}`;
-  cardCloud.innerHTML = `${myData.cloud}`;
-  cardSunRise.innerHTML = `${myData.sunRise}`;
-  cardSunSet.innerHTML = `${myData.sunSet}`;
+  cardName.innerHTML = "Paris";
+  cardCountry.innerHTML = "France";
+  cardTemperature.innerHTML = "400 C";
+  // cardWeather.innerHTML = `${myData.weather}`;
+  // cardMaxTemp.innerHTML = `${myData.maxTemp}`;
+  // cardMinTemp.innerHTML = `${myData.minTemp}`;
+  // cardPressure.innerHTML = `${myData.pressure}`;
+  // cardHumidity.innerHTML = `${myData.humidity}`;
+  // cardVisibility.innerHTML = `${myData.visibility}`;
+  // cardWindSpeed.innerHTML = `${myData.windSpeed}`;
+  // cardWinDeg.innerHTML = `${myData.winDeg}`;
+  // cardCloud.innerHTML = `${myData.cloud}`;
+  // cardSunRise.innerHTML = `${myData.sunRise}`;
+  // cardSunSet.innerHTML = `${myData.sunSet}`;
 
   card.classList.add('card');
 
   card.appendChild(cardName);
   card.appendChild(cardCountry);
   card.appendChild(cardTemperature);
-  card.appendChild(cardWeather);
-  card.appendChild(cardMaxTemp);
-  card.appendChild(cardMinTemp);
-  card.appendChild(cardPressure);
-  card.appendChild(cardHumidity);
-  card.appendChild(cardVisibility);
-  card.appendChild(cardWindSpeed);
-  card.appendChild(cardWinDeg);
-  card.appendChild(cardCloud);
-  card.appendChild(cardSunRise);
-  card.appendChild(cardSunSet);
+  // card.appendChild(cardWeather);
+  // card.appendChild(cardMaxTemp);
+  // card.appendChild(cardMinTemp);
+  // card.appendChild(cardPressure);
+  // card.appendChild(cardHumidity);
+  // card.appendChild(cardVisibility);
+  // card.appendChild(cardWindSpeed);
+  // card.appendChild(cardWinDeg);
+  // card.appendChild(cardCloud);
+  // card.appendChild(cardSunRise);
+  // card.appendChild(cardSunSet);
 
   return card;
 }
@@ -136,6 +136,7 @@ function loadPage () {
 
   content.appendChild(header());
   content.appendChild(main());
+  content.appendChild(showData());
   content.appendChild(footer());
 }
 
