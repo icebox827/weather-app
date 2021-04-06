@@ -43,7 +43,7 @@ function main() {
   searchBtn.innerHTML = 'Search location';
 
   searchBtn.addEventListener('click', async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     if (cityInput.value === " ") return;
     const fetchData = await api.getData(cityInput.value);
     showData(fetchData);
