@@ -2,7 +2,7 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "Weather application using API ",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
