@@ -28,6 +28,7 @@ const api = (() => {
       }
     }
   };
+
   return {getData, myData};
 })();
 

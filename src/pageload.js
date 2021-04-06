@@ -40,13 +40,13 @@ function main() {
 
   cityLabel.innerHTML = '<h2>City name</h2>';
   cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
-  searchBtn.innerHTML = 'Search';
+  searchBtn.innerHTML = 'Search location';
 
   searchBtn.addEventListener('click', async () => {
-    if (cityInput.value === "") return;
-    const myData = await api.getData(cityInput.value);
-    showData(myData);
-  })
+    if (cityInput.value === " ") return;
+    const fetchData = await api.getData(cityInput.value);
+    showData(fetchData);
+  });
 
   main.appendChild(form);
   form.appendChild(cityLabel);
