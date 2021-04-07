@@ -50,8 +50,13 @@ function main() {
   const cardHumidity = document.createElement('h5');
   const cardPressure = document.createElement('h5');
 
-
   card.classList.add('card');
+  cardCity.setAttribute('id', 'city');
+  cardCountry.setAttribute('id', 'country');
+  cardWeather.setAttribute('id', 'weather');
+  cardTemp.setAttribute('id', 'temp');
+  cardHumidity.setAttribute('id', 'humidity');
+  cardPressure.setAttribute('id', 'pressure');
 
   card.appendChild(cardCity);
   card.appendChild(cardCountry);
