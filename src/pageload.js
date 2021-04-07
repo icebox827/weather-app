@@ -65,11 +65,11 @@ function main() {
   card.appendChild(cardHumidity);
   card.appendChild(cardPressure);
 
-  main.appendChild(form);
-  main.appendChild(card);
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
   form.appendChild(searchBtn);
+  main.appendChild(form);
+  main.appendChild(card);
 
   searchBtn.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -82,7 +82,19 @@ function main() {
 }
 
 const showData = (myData) => {
-  
+  const city = document.getElementById('city');
+  const country = document.getElementById('country');
+  const weather = document.getElementById('weather');
+  const temperature = document.getElementById('temp');
+  const humidity = document.getElementById('humidity');
+  const pressure = document.getElementById('pressure');
+
+  city.innerHTML = myData.name;
+  country.innerHTML = myData.sys.country;
+  weather.innerHTML = myData.weather[0].description;
+  temperature.innerHTML = myData.main.temp;
+  humidity.innerHTML = myData.main.humidity;
+  pressure.innerHTML = myData.main.pressure;
 }
 
 function footer() {
@@ -112,7 +124,7 @@ async function loadPage () {
 
   content.appendChild(header());
   content.appendChild(main());
-  // content.appendChild(showData(fetchData));
+  (showData(fetchData));
   content.appendChild(footer());
 }
 
