@@ -59,6 +59,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
+  animation: fadeIn 2s;
 }
 
 .footer {
@@ -82,4 +83,14 @@ input {
 .fab {
   margin-left: 1rem;
   font-size: 2rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
