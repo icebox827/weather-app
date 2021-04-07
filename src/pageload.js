@@ -46,11 +46,22 @@ function main() {
   const cardCity = document.createElement('h3');
   const cardCountry = document.createElement('h4');
   const cardWeather = document.createElement('h5');
+  const cardTempLabel = document.createElement('h5');
   const cardTemp = document.createElement('h5');
+  const cardHumLabel = document.createElement('h5');
   const cardHumidity = document.createElement('h5');
+  const cardPresLabel = document.createElement('h5');
   const cardPressure = document.createElement('h5');
 
   card.classList.add('card');
+  cardTempLabel.classList.add('temp');
+  cardHumLabel.classList.add('hum');
+  cardPresLabel.classList.add('pres');
+
+  cardTempLabel.innerHTML = 'Temperature';
+  cardHumLabel.innerHTML = 'Humidity';
+  cardPresLabel.innerHTML = 'Pressure';
+
   cardCity.setAttribute('id', 'city');
   cardCountry.setAttribute('id', 'country');
   cardWeather.setAttribute('id', 'weather');
@@ -61,8 +72,11 @@ function main() {
   card.appendChild(cardCity);
   card.appendChild(cardCountry);
   card.appendChild(cardWeather);
+  card.appendChild(cardTempLabel);
   card.appendChild(cardTemp);
+  card.appendChild(cardHumLabel);
   card.appendChild(cardHumidity);
+  card.appendChild(cardPresLabel);
   card.appendChild(cardPressure);
 
   form.appendChild(cityLabel);
