@@ -26,10 +26,8 @@ const api = (() => {
       myData.sunRise = myJson.sys.sunrise;
       myData.sunSet = myJson.sys.sunset;
     } catch (error) {
-      if(myJson.cod === '404') {
         return error;
       }
-    }
   };
 
   return {getData, myData};

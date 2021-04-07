@@ -31,7 +31,7 @@ function main() {
   cityInput.setAttribute('type', 'text');
   cityInput.setAttribute('id', 'cityInput');
   cityInput.setAttribute('name', 'City');
-  cityInput.setAttribute('placeholder', 'Please enter the name of a city.');
+  cityInput.setAttribute('placeholder', 'Enter the name of a city.');
 
   searchBtn.setAttribute('id', 'button');
   searchBtn.setAttribute('type', 'submit');
@@ -73,7 +73,6 @@ const showData = (myData) => {
   const cardCloud= document.createElement('h6');
   const cardSunRise = document.createElement('h6');
   const cardSunSet = document.createElement('h6');
-  
 
   cardName.innerHTML = `${myData.name}`;
   cardCountry.innerHTML = `${myData.country}`;
