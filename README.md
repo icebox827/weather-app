@@ -18,7 +18,7 @@ Eslint
 
 ## Live demo
 
-[clik here!](https://icebox827.github.io/Restaurant-Page//.)
+[clik here!](https://icebox827.github.io/weather-app/)
 
 ## 🔨 Technologies
 
