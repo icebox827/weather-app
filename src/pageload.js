@@ -20,7 +20,7 @@ function main() {
   main.setAttribute('id', 'main');
 
   const form = document.createElement('form');
-  form.setAttribute('id', 'myForm')
+  form.setAttribute('id', 'myForm');
 
   const cityLabel = document.createElement('label');
   const cityInput = document.createElement('input');
@@ -35,11 +35,11 @@ function main() {
 
   searchBtn.setAttribute('id', 'button');
   searchBtn.setAttribute('type', 'submit');
-  searchBtn.setAttribute('value', 'Search')
+  searchBtn.setAttribute('value', 'Search');
   searchBtn.classList.add('submit', 'btn-primary');
 
   cityLabel.innerHTML = '<h2>City name</h2>';
-  cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
+  cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>';
   searchBtn.innerHTML = 'Search location';
 
   const card = document.createElement('card');
@@ -73,11 +73,11 @@ function main() {
 
   searchBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    if (cityInput.value === " ") return;
+    if (cityInput.value === ' ') return;
     const fetchData = await api(cityInput.value || 'Quebec');
     showData(fetchData);
   });
-  
+
   return main;
 }
 
@@ -95,7 +95,7 @@ const showData = (myData) => {
   temperature.innerHTML = myData.main.temp;
   humidity.innerHTML = myData.main.humidity;
   pressure.innerHTML = myData.main.pressure;
-}
+};
 
 function footer() {
   const footer = document.createElement('footer');
@@ -118,7 +118,7 @@ function footer() {
   return footer;
 }
 
-async function loadPage () {
+async function loadPage() {
   const content = document.getElementById('content');
   const fetchData = await api('Quebec');
 
