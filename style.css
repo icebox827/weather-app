@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url(./assets/pexels-brett-sayles-912364.jpg);
 }
 
 header {
@@ -53,7 +54,7 @@ input {
 }
 
 .card {
-  width: 20rem;
+  width: 18rem;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
