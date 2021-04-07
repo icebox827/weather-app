@@ -13,7 +13,8 @@ Eslint
 ## Usage
 
 - Open a terminal.
-- Clone the repo by typing that command `git clone https://github.com/icebox827/weather-app.git`  
+- Clone the repo by typing that command `git clone https://github.com/icebox827/weather-app.git`
+- Run `npm run build` in your terminal to run the project locally
 
 ## Live demo
 
