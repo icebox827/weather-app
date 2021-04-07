@@ -25,7 +25,8 @@ nav h1 {
 
 main {
   display: flex;
-  justify-content: center;
+  justify-content: centerspa;
+  flex-direction: column;
   margin-top: 3rem;
 }
 
@@ -34,13 +35,21 @@ form {
   flex-direction: column;
 }
 
+label {
+  align-self: center;
+}
+
 input {
   border-radius: 5px;
+  width: 20%;
+  align-self: center;
 }
 
 .submit {
   margin-top: 10px;
   border-radius: 5px;
+  width: 10%;
+  align-self: center;
 }
 
 .card {
@@ -48,7 +57,7 @@ input {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .footer {
