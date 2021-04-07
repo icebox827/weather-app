@@ -42,71 +42,42 @@ function main() {
   cityInput.innerHTML = '<i class="fa fa-search" aria-hidden="true"></i>'
   searchBtn.innerHTML = 'Search location';
 
-  searchBtn.addEventListener('click', async (e) => {
-    e.preventDefault();
-    if (cityInput.value === " ") return;
-    const fetchData = await api.getData(cityInput.value);
-    showData(fetchData);
-  });
+  const card = document.createElement('card');
+  const cardCity = document.createElement('h3');
+  const cardCountry = document.createElement('h4');
+  const cardWeather = document.createElement('h5');
+  const cardTemp = document.createElement('h5');
+  const cardHumidity = document.createElement('h5');
+  const cardPressure = document.createElement('h5');
+
+
+  card.classList.add('card');
+
+  card.appendChild(cardCity);
+  card.appendChild(cardCountry);
+  card.appendChild(cardWeather);
+  card.appendChild(cardTemp);
+  card.appendChild(cardHumidity);
+  card.appendChild(cardPressure);
 
   main.appendChild(form);
+  main.appendChild(card);
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
   form.appendChild(searchBtn);
 
+  searchBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (cityInput.value === " ") return;
+    const fetchData = await api(cityInput.value || 'Quebec');
+    showData(fetchData);
+  });
+  
   return main;
 }
 
 const showData = (myData) => {
-  const card = document.createElement('card');
-  const cardName = document.createElement('h3');
-  const cardCountry = document.createElement('h4');
-  const cardTemperature = document.createElement('h6');
-  const cardWeather = document.createElement('h6');
-  const cardMaxTemp = document.createElement('h6');
-  const cardMinTemp = document.createElement('h6');
-  const cardPressure = document.createElement('h6');
-  const cardHumidity = document.createElement('h6');
-  const cardVisibility = document.createElement('h6');
-  const cardWindSpeed = document.createElement('h6');
-  const cardWinDeg = document.createElement('h6');
-  const cardCloud= document.createElement('h6');
-  const cardSunRise = document.createElement('h6');
-  const cardSunSet = document.createElement('h6');
-
-  cardName.innerHTML = [myData].name;
-  cardCountry.innerHTML = [myData].country;
-  cardTemperature.innerHTML = [myData].temp;
-  cardWeather.innerHTML = [myData].weather;
-  cardMaxTemp.innerHTML = [myData].maxTemp;
-  cardMinTemp.innerHTML = [myData].minTemp;
-  cardPressure.innerHTML = [myData].pressure;
-  cardHumidity.innerHTML = [myData].humidity;
-  cardVisibility.innerHTML = [myData].visibility;
-  cardWindSpeed.innerHTML = [myData].windSpeed;
-  cardWinDeg.innerHTML = [myData].winDeg;
-  cardCloud.innerHTML = [myData].cloud;
-  cardSunRise.innerHTML = [myData].sunRise;
-  cardSunSet.innerHTML = [myData].sunSet;
-
-  card.classList.add('card');
-
-  card.appendChild(cardName);
-  card.appendChild(cardCountry);
-  card.appendChild(cardTemperature);
-  card.appendChild(cardWeather);
-  card.appendChild(cardMaxTemp);
-  card.appendChild(cardMinTemp);
-  card.appendChild(cardPressure);
-  card.appendChild(cardHumidity);
-  card.appendChild(cardVisibility);
-  card.appendChild(cardWindSpeed);
-  card.appendChild(cardWinDeg);
-  card.appendChild(cardCloud);
-  card.appendChild(cardSunRise);
-  card.appendChild(cardSunSet);
-
-  return card;
+  
 }
 
 function footer() {
@@ -130,12 +101,13 @@ function footer() {
   return footer;
 }
 
-function loadPage () {
+async function loadPage () {
   const content = document.getElementById('content');
+  const fetchData = await api('Quebec');
 
   content.appendChild(header());
   content.appendChild(main());
-  content.appendChild(showData());
+  // content.appendChild(showData(fetchData));
   content.appendChild(footer());
 }
 
