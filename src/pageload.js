@@ -58,9 +58,9 @@ function main() {
   cardHumLabel.classList.add('hum');
   cardPresLabel.classList.add('pres');
 
-  cardTempLabel.innerHTML = 'Temperature';
-  cardHumLabel.innerHTML = 'Humidity';
-  cardPresLabel.innerHTML = 'Pressure';
+  cardTempLabel.innerHTML = 'Temperature K<i class="fas fa-thermometer-half"></i>';
+  cardHumLabel.innerHTML = 'Humidity %<i class="fas fa-tint"></i>';
+  cardPresLabel.innerHTML = 'Pressure hPa<i class="fas fa-tachometer-alt"></i>';
 
   cardCity.setAttribute('id', 'city');
   cardCountry.setAttribute('id', 'country');
