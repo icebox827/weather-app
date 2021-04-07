@@ -1,96 +1,96 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-image: url(./assets/pexels-brett-sayles-912364.jpg);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-image: url(./assets/pexels-brett-sayles-912364.jpg);
 }
 
 header {
-  background-color: blue;
+	background-color: blue;
 }
 
 nav {
-  background-color: inherit;
+	background-color: inherit;
 }
 
 nav h1 {
-  color: white;
-  font-weight: 800;
-  margin-left: auto;
-  margin-right: auto;
+	color: white;
+	font-weight: 800;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 main {
-  display: flex;
-  justify-content: centerspa;
-  flex-direction: column;
-  margin-top: 3rem;
+	display: flex;
+	justify-content: centerspa;
+	flex-direction: column;
+	margin-top: 3rem;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 label {
-  align-self: center;
+	align-self: center;
 }
 
 input {
-  border-radius: 5px;
-  width: 20%;
-  align-self: center;
+	border-radius: 5px;
+	width: 20%;
+	align-self: center;
 }
 
 .submit {
-  margin-top: 10px;
-  border-radius: 5px;
-  width: 10%;
-  align-self: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	width: 10%;
+	align-self: center;
 }
 
 .card {
-  width: 18rem;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  animation: fadeIn 2s;
+	width: 18rem;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	animation: fadeIn 2s;
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0.4rem;
-  text-align: center;
-  background-color: black;
-  border-top: 1px solid white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0.4rem;
+	text-align: center;
+	background-color: black;
+	border-top: 1px solid white;
 }
 
 .footer p {
-  color: white;
+	color: white;
 }
 
 .fab {
-  margin-left: 1rem;
-  font-size: 2rem;
+	margin-left: 1rem;
+	font-size: 2rem;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }
