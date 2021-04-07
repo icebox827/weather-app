@@ -62,6 +62,18 @@ input {
 	animation: fadeIn 2s;
 }
 
+.temp {
+  color: blue;
+}
+
+.hum {
+  color: blue;
+}
+
+.pres {
+  color: blue;
+}
+
 .footer {
 	position: fixed;
 	left: 0;
