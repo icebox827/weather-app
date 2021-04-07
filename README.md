@@ -13,7 +13,7 @@ Eslint
 ## Usage
 
 - Open a terminal.
-- Clone the repo by typing that command `git clone https://github.com/icebox827/Restaurant-Page`  
+- Clone the repo by typing that command `git clone https://github.com/icebox827/weather-app.git`  
 
 ## Live demo
 
@@ -43,7 +43,7 @@ Eslint
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/icebox827/Restaurant-Page/issues/1).
+Feel free to check the [issues page](https://github.com/icebox827/weather-app/issues/2).
 
 ## Show your support
 
