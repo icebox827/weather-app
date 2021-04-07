@@ -24,6 +24,8 @@ Eslint
 - HTML5
 - CSS3
 - Javascript
+- npm
+- WebPacker
 - VSCode
 - Bootstrap
 - Linters
