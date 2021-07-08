@@ -1,0 +1,38 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather application using API ",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --mode development --open",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icebox827/weather-app.git"
+  },
+  "author": "Denis Lafontant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icebox827/weather-app/issues"
+  },
+  "homepage": "https://github.com/icebox827/weather-app#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^5.2.0",
+    "gh-pages-deploy": "^0.5.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "eslint-config-airbnb": "^18.2.1"
+  }
+}
