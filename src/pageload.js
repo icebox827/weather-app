@@ -6,7 +6,7 @@ function header() {
   const name = document.createElement('h1');
 
   nav.classList.add('navbar');
-  name.innerHTML = 'UHM Weather Forecast<i class="fas fa-cloud-sun"></i>';
+  name.innerHTML = 'Weather Forecast<i class="fas fa-cloud-sun"></i>';
 
   nav.appendChild(name);
   header.appendChild(nav);
