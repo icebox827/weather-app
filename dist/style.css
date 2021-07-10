@@ -10,7 +10,7 @@ body {
 }
 
 header {
-	background-color: blue;
+	background-color: rgb(70, 70, 230);
 }
 
 nav {
@@ -26,7 +26,7 @@ nav h1 {
 
 main {
 	display: flex;
-	justify-content: centerspa;
+	justify-content: center;
 	flex-direction: column;
 	margin-top: 3rem;
 }
@@ -42,7 +42,7 @@ label {
 
 input {
 	border-radius: 5px;
-	width: 20%;
+	width: 25%;
 	align-self: center;
 }
 
@@ -84,7 +84,7 @@ input {
 	width: 100%;
 	padding: 0.4rem;
 	text-align: center;
-	background-color: blue;
+	background-color: rgb(70, 70, 230);
 	border-top: 1px solid white;
 }
 
