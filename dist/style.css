@@ -54,7 +54,7 @@ input {
 }
 
 .card {
-	width: 18rem;
+	width: 60%;
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -62,16 +62,34 @@ input {
 	animation: fadeIn 2s;
 }
 
+.card-text {
+	display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 .temp {
   color: blue;
+  margin-right: 10px;
+}
+
+.minTemp {
+  color: blue;
+  margin-right: 10px;
+}
+.maxTemp {
+  color: blue;
+  margin-right: 10px;
 }
 
 .hum {
   color: blue;
+  margin-right: 10px;
 }
 
 .pres {
   color: blue;
+  margin-right: 10px;
 }
 
 .footer {
