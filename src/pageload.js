@@ -58,9 +58,9 @@ function main() {
   cardHumLabel.classList.add('hum');
   cardPresLabel.classList.add('pres');
 
-  cardTempLabel.innerHTML = 'Temperature K<i class="fas fa-thermometer-half"></i>';
-  cardHumLabel.innerHTML = 'Humidity %<i class="fas fa-tint"></i>';
-  cardPresLabel.innerHTML = 'Pressure hPa<i class="fas fa-tachometer-alt"></i>';
+  cardTempLabel.innerHTML = 'Temperature in C <i class="fas fa-thermometer-half"></i>';
+  cardHumLabel.innerHTML = 'Humidity % <i class="fas fa-tint"></i>';
+  cardPresLabel.innerHTML = 'Pressure hPa <i class="fas fa-tachometer-alt"></i>';
 
   cardCity.setAttribute('id', 'city');
   cardCountry.setAttribute('id', 'country');
@@ -110,6 +110,13 @@ const showData = (myData) => {
   humidity.innerHTML = myData.main.humidity;
   pressure.innerHTML = myData.main.pressure;
 };
+
+function background() {
+  // eslint-disable-next-line no-multi-assign
+  const background = document.getElementById('content').style.backgroundImage = "url('../assets/pexels-brett-sayles-912364.jpg')";
+
+  return background;
+}
 
 function footer() {
   const footer = document.createElement('footer');
