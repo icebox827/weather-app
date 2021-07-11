@@ -71,6 +71,7 @@ function main() {
 
   city.setAttribute('id', 'city');
   country.setAttribute('id', 'country');
+  icon.setAttribute('id', 'icon');
   weather.setAttribute('id', 'weather');
   temperature.setAttribute('id', 'temperatute');
   minTemperature.setAttribute('id', 'minTemperature');
@@ -89,6 +90,7 @@ function main() {
 
   form.appendChild(cityLabel);
   form.appendChild(cityInput);
+  form.appendChild(searchBtn);
   cardTitle.appendChild(city);
   cardSubtitle.appendChild(country);
   cardText.appendChild(icon);
@@ -109,8 +111,32 @@ function main() {
   main.appendChild(form);
   main.appendChild(card);
 
+  searchBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (cityInput.value === ' ') return;
+    const fetchdata = await api(cityInput.value || 'London');
+    showData(fetchdata);
+  });
+
   return main;
 }
+
+const showData = (myData) => {
+  const cityData = document.getElementById('city');
+  const countryData = document.getElementById('country');
+  const iconData = document.getElementById('icon');
+  const weatherData = document.getElementById('weather');
+  const temperatureData = document.getElementById('temperature');
+  const minTemperatureData = document.getElementById('minTemperature');
+  const maxTemperatureData = document.getElementById('maxTemperature');
+  const pressureData = document.getElementById('pressure');
+  const humidityData = document.getElementById('humidity');
+
+  cityData.innerHTML = myData.name;
+  countryData.innerHTML = myData.sys.country;
+  iconData.innerHTML = myData.weather.icon;
+
+};
 
 function footer() {
   const footer = document.createElement('footer');
@@ -135,40 +161,15 @@ function footer() {
 
 async function loadPage() {
   const content = document.getElementById('content');
-  const fetchdata = await api('Quebec');
+  const fetchdata = await api('London');
 
   content.appendChild(header());
   content.appendChild(main());
+  (showData(fetchdata));
   content.appendChild(footer());
 }
 
 export default loadPage;
-
-//   card.appendChild(cardCity);
-//   card.appendChild(cardCountry);
-//   card.appendChild(cardWeather);
-//   card.appendChild(cardTempLabel);
-//   card.appendChild(cardTemp);
-//   card.appendChild(cardHumLabel);
-//   card.appendChild(cardHumidity);
-//   card.appendChild(cardPresLabel);
-//   card.appendChild(cardPressure);
-
-//   form.appendChild(cityLabel);
-//   form.appendChild(cityInput);
-//   form.appendChild(searchBtn);
-//   main.appendChild(form);
-//   main.appendChild(card);
-
-//   searchBtn.addEventListener('click', async (e) => {
-//     e.preventDefault();
-//     if (cityInput.value === ' ') return;
-//     const fetchData = await api(cityInput.value || 'Quebec');
-//     showData(fetchData);
-//   });
-
-//   return main;
-// }
 
 // const showData = (myData) => {
 //   const city = document.getElementById('city');
@@ -185,15 +186,3 @@ export default loadPage;
 //   humidity.innerHTML = myData.main.humidity;
 //   pressure.innerHTML = myData.main.pressure;
 // };
-
-// async function loadPage() {
-//   const content = document.getElementById('content');
-//   const fetchData = await api('Quebec');
-
-//   content.appendChild(header());
-//   content.appendChild(main());
-//   (showData(fetchData));
-//   content.appendChild(footer());
-// }
-
-// export default loadPage;
