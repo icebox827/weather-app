@@ -170,7 +170,7 @@ async function loadPage() {
 
   content.appendChild(header());
   content.appendChild(main());
-  (showData(fetchdata));
+  showData(fetchdata);
   content.appendChild(footer());
 }
 
