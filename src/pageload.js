@@ -134,8 +134,13 @@ const showData = (myData) => {
 
   cityData.innerHTML = myData.name;
   countryData.innerHTML = myData.sys.country;
-  iconData.innerHTML = myData.weather.icon;
-
+  iconData.innerHTML = myData.weather[0].icon;
+  weatherData.innerHTML = myData.weather[0].description;
+  temperatureData.innerHTML = myData.main.temp;
+  minTemperatureData.innerHTML = myData.main.temp_min;
+  maxTemperatureData.innerHTML = myData.main.temp_max;
+  pressureData.innerHTML = myData.main.pressure;
+  humidityData.innerHTML = myData.main.humidity;
 };
 
 function footer() {
