@@ -175,19 +175,3 @@ async function loadPage() {
 }
 
 export default loadPage;
-
-// const showData = (myData) => {
-//   const city = document.getElementById('city');
-//   const country = document.getElementById('country');
-//   const weather = document.getElementById('weather');
-//   const temperature = document.getElementById('temp');
-//   const humidity = document.getElementById('humidity');
-//   const pressure = document.getElementById('pressure');
-
-//   city.innerHTML = myData.name;
-//   country.innerHTML = myData.sys.country;
-//   weather.innerHTML = myData.weather[0].description;
-//   temperature.innerHTML = myData.main.temp;
-//   humidity.innerHTML = myData.main.humidity;
-//   pressure.innerHTML = myData.main.pressure;
-// };
